@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1785125717667,
+    "sender": "disha",
+    "text": "hello",
+    "reply": null,
+    "reactions": {},
+    "edited": false,
+    "time": "09:45 am"
+  },
+  {
+    "id": 1785125818519,
+    "sender": "jyoti",
+    "text": "hey....",
+    "reply": null,
+    "reactions": {},
+    "edited": false,
+    "time": "09:46 am"
+  },
+  {
+    "id": 1785126239942,
+    "sender": "vedika",
+    "text": "hello everyone",
+    "reply": null,
+    "reactions": {},
+    "edited": false,
+    "time": "09:53 am"
+  },
+  {
+    "id": 1785127589788,
+    "sender": "shruti",
+    "text": "hiii guys👋",
+    "reply": null,
+    "reactions": {},
+    "edited": false,
+    "time": "10:16 am"
+  }
+]

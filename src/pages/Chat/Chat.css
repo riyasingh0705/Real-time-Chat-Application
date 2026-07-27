@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+    width:100%;
+    height:100%;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8fafc;
+    overflow:hidden;
+}
+
+/* Entire page */
+.chat-page{
+
+    height:100dvh;
+    min-height:100dvh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+/* Below header */
+.chat-body{
+
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+
+}
+
+/* Right section */
+.chat-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}

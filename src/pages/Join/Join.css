@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* ===========================
+   Join Page
+=========================== */
+
+.join-page{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        -45deg,
+        #4F46E5,
+        #9333EA,
+        #2563EB,
+        #0EA5E9
+    );
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 12s ease infinite;
+
+}
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.join-card{
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.join-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.logo{
+
+    font-size:42px;
+
+    margin-bottom:14px;
+
+    letter-spacing:1px;
+
+    user-select:none;
+
+}
+
+.subtitle{
+
+    margin-bottom:30px;
+
+    opacity:.85;
+
+    font-size:16px;
+
+    user-select:none;
+
+}
+
+/* ===========================
+   Input
+=========================== */
+
+.join-card input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    margin-bottom:22px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.join-card input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.join-card input:focus{
+
+    box-shadow:0 0 0 4px rgba(255,255,255,.25);
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.join-card button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#ffffff,#f1f5ff);
+
+    color:#4F46E5;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.join-card button:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    background:linear-gradient(135deg,#4F46E5,#2563EB);
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(79,70,229,.4);
+
+}
+
+.join-card button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   Background Animation
+=========================== */
+
+@keyframes bgAnimation{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+.join-error {
+
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: rgba(239, 68, 68, 0.15);
+
+  border: 1px solid rgba(239, 68, 68, 0.4);
+
+  color: #ef4444;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-align: center;
+
+  animation: fadeIn 0.3s ease;
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-5px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .join-card{
+
+        width:90%;
+
+        padding:32px 22px;
+
+    }
+
+    .logo{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:15px;
+
+    }
+
+    .join-card input{
+
+        font-size:15px;
+
+        padding:14px 16px;
+
+    }
+
+    .join-card button{
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
+}

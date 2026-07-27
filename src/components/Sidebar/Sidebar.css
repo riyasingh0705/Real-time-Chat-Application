@@ -1,0 +1,354 @@
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar{
+
+    width:280px;
+
+    background:#ffffff;
+
+    padding:24px 20px;
+
+    border-right:1px solid #E5E7EB;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ===========================
+   Sidebar Header
+=========================== */
+
+.sidebar-header{
+
+    margin-bottom:24px;
+
+}
+
+.sidebar-header h3{
+
+    margin:0;
+
+    color:#6D28D9;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   User Card
+=========================== */
+
+.user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:12px 16px;
+
+    margin-bottom:12px;
+
+    border-radius:20px;
+
+    background:#F6F2FF;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    animation:fadeInUser .28s ease;
+
+}
+
+.user:hover{
+
+    transform:translateY(-2px);
+
+    background:#F0E9FF;
+
+    box-shadow:0 10px 22px rgba(109,40,217,.12);
+
+}
+
+/* ===========================
+   Avatar
+=========================== */
+
+.avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#8B5CF6,#6D28D9);
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+    box-shadow:0 6px 16px rgba(109,40,217,.22);
+
+}
+
+/* ===========================
+   User Info
+=========================== */
+
+.user-info{
+
+    flex:1;
+
+}
+
+.user-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:4px;
+
+}
+
+.user-top h4{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#111827;
+
+    font-weight:700;
+
+}
+
+/* YOU badge */
+
+.you-badge{
+
+    background:#E9D5FF;
+
+    color:#6D28D9;
+
+    padding:3px 8px;
+
+    border-radius:999px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+/* ===========================
+   Online Status
+=========================== */
+
+.status-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.online-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:0 0 0 3px rgba(34,197,94,.18);
+
+}
+
+.status-text{
+
+    color:#16A34A;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeInUser{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+        width:240px;
+        padding:20px 16px;
+    }
+
+    .sidebar-header h3{
+        font-size:22px;
+    }
+
+    .avatar{
+        width:46px;
+        height:46px;
+        font-size:20px;
+    }
+
+    .user-top h4{
+        font-size:16px;
+    }
+
+}
+
+/* ===========================
+   Mobile Sidebar
+=========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+
+        position:fixed;
+
+        top:70px;
+
+        right:-280px;
+
+        width:280px;
+
+        height:calc(100vh - 70px);
+
+        background:#fff;
+
+        border-left:1px solid #E5E7EB;
+
+        border-right:none;
+
+        z-index:999;
+
+        transition:right .35s ease;
+
+        overflow-y:auto;
+
+        box-shadow:-8px 0 25px rgba(0,0,0,.18);
+
+    }
+
+    .sidebar.open{
+
+        right:0;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .sidebar{
+
+        top:65px;
+
+        width:260px;
+
+        right:-260px;
+
+        height:calc(100vh - 65px);
+
+    }
+
+    .sidebar.open{
+
+        right:0;
+
+    }
+
+}
+
+/* ===========================
+   Mobile Overlay
+=========================== */
+
+.sidebar-overlay{
+
+    display:none;
+
+}
+
+@media (max-width:768px){
+
+    .sidebar-overlay{
+
+        display:block;
+
+        position:fixed;
+
+        inset:0;
+
+        background:rgba(0,0,0,.35);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:.3s;
+
+        z-index:998;
+
+    }
+
+    .sidebar-overlay.show{
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+}
